@@ -1,0 +1,54 @@
+/* pages/login/login.wxss */
+.login-box{
+  padding-top:100rpx;
+  background: #f8f8f8;
+}
+
+.logo{
+  display: block;
+  width:340rpx;
+  height: 200rpx;
+  margin:50rpx auto;
+}
+
+.logo .img{
+  width:100%;
+  height: 100%;
+}
+
+.login-main{
+  position: relative;
+}
+
+.login-main .img{
+  width:100%;
+  height: 640rpx;
+}
+
+.login-form{
+  position: absolute;
+  left:50%;
+  top:56%;
+  width:76%;
+  transform:translate(-50%,-50%);
+  font-size: 32rpx;
+}
+
+.login-formp{
+  position: relative;
+  height: 100rpx;
+  border-bottom:1px solid #e1e1e1;
+}
+.login-formp input{
+  height: 100%;
+  width:80%;
+}
+
+.yzm-box{
+  position: absolute;
+  line-height: 90rpx;
+  bottom:0;
+  right:0;
+  font-size: 24rpx;
+  color: red;
+}

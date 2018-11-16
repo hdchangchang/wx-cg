@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<div class="login-box">
+  <span class="logo">
+    <image class="img" mode="aspectFit" src="../../resource/logo.png"></image>
+  </span>
+  <div class="login-main">
+    <image class="img" mode="aspectFit" src="../../resource/bg-login.png"></image>
+    <div class="login-form">
+      <p class="login-formp">
+        <input placeholder='输入手机号' type="number" />
+      </p>
+      <p class="login-formp">
+        <input placeholder='输入验证码' type="number" />
+        <div class="yzm-box">
+          <span class="yzm-num">获取验证码</span>
+          <span class="yzm-txt"></span>
+        </div>
+      </p>
+      <p class="login-formp">
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+/* pages/map/map.wxss */
+.map-tapbar{
+  position: fixed;
+  top:0;
+  left:0;
+  background: #fff;
+  width: 100%;
+}
+cover-view{
+  display: block;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+cover-image{
+  display: block;
+}
+
+.back,.search{
+  position: fixed;
+  right:38rpx;
+  z-index: 1;
+  width:100rpx;
+  height:100rpx;
+  background:rgba(255,255,255,.8);
+  border-radius: 50%;
+  padding: 24rpx;
+}
+.back{
+  bottom:350rpx;
+}
+.search{
+  bottom:480rpx;
+}
+.back .i,.search .i{
+  width:100%;
+  height: 100%;
+}
+
+
+.user-tx{
+  position: fixed;
+  right:30rpx;
+  top:160rpx;
+  width:150rpx;
+  height:150rpx;
+  background: #fff;
+  border-radius: 50%;
+  border:16rpx solid #fff;
+}
+.user-tx .img{
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+}
+
+.pt-box{
+  position: fixed;
+  bottom:20rpx;
+  left:3%;
+  width:94%;
+  background: rgba(255,255,255,.9);
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+
+.pt{
+  display: flex;
+  font-size: 30rpx;
+  padding-left:65rpx;
+  padding-top:15rpx;
+  margin:15rpx 0;
+  line-height:60rpx;
+  position: relative;
+}
+.pt .i{
+  position: absolute;
+  left: 0;
+  top:0;
+  display: inline-block;
+  width:50rpx;
+  height:50rpx;
+}
+
+.pt-lab{
+  display: inlne-block;
+  width:90rpx;
+  flex-shrink: 0;
+}
+.pt-xx{
+  width:400rpx; /*这里可以小于400的随意值， 目的是控制省略文本长度*/
+  flex:1;
+}
+.pt-xx-tit,.pt-xx-p{
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pt-xx-tit{
+  margin-bottom:20rpx;
+}
+.pt-xx-p{
+  color: #999;
+}

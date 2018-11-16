@@ -1,0 +1,18 @@
+/* pages/components/topNav/topNav.wxss */
+.top-nav{
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom:1px solid #e1e1e1;
+  margin-bottom:30rpx;
+  font-size: 32rpx;
+  padding-left:30rpx;
+  line-height: 96rpx;
+  overflow: hidden;
+  color: #666;
+}
+.top-nav .back{
+  margin-right: 20rpx;
+}
+.top-nav .tit{
+  vertical-align: middle;
+}

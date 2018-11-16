@@ -1,0 +1,23 @@
+<!--pages/map/search/search.wxml-->
+<top-nav title="搜索地理位置"></top-nav>
+<div class="search-txtbox">
+  <div class="search-city">北京</div>
+  <input class="search-txt" placeholder='请输入位置关键字' bindinput="getKeyWordList" focus='true' />
+  <div class="search-btn" bindtap="goSearch">
+    <i-icon type="search" size="22" color='#999'></i-icon>
+  </div>
+</div>
+<div class="search-list" wx:if="{{list.length}}">
+  <ul class="search-list-ul">
+    <li class="search-list-li" wx:for="{{list}}" data-item="{{item}}" bindtap="toMap">
+      <h6>{{item.title}}</h6>
+      <p>{{item.address}}</p>
+    </li>
+  </ul>
+</div>
+<div class="search-his" wx:else>
+  <h6 class="his-tit">搜索历史</h6>
+  <p class="his-labbox">
+    <span wx:for="{{searchKeywords}}">{{item}}</span>
+  </p>
+</div>

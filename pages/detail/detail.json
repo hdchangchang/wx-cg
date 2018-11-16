@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-nav": "/components/topNav/topNav",
+    "i-input-number": "../../libs/iview/input-number/index"
+  }
+}

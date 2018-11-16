@@ -1,0 +1,56 @@
+
+<map 
+  id="map" 
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}" 
+  scale="18" 
+  controls="{{controls}}" 
+  bindcontroltap="controltap" 
+  bindcallouttap="callouttap"
+  markers="{{markers}}" 
+  bindmarkertap="markertap" 
+  polyline="{{polyline}}" 
+  bindregionchange="regionchange" 
+  show-location style="width: 100%;height:{{mapH+'px'}}">
+</map>
+<!--pages/map/map.wxml-->
+<!--  -->
+<cover-view class="map-tapbar" style="{{'height:'+navPadding+'rpx;'}}"></cover-view>
+<!-- 用户头像 -->
+<cover-view class="user-tx">
+  <cover-image class="img" src="{{userInfo.avatarUrl}}" />
+</cover-view>
+<!-- 回到当前位置 -->
+<cover-view class="back" bindtap="back">
+  <cover-image class="i " src='../../resource/toPosition.png' />
+  <!-- <cover-view class="i i-toPosition"></cover-view> -->
+</cover-view>
+<!-- 搜索 -->
+<cover-view class="search" bindtap="toSearch">
+  <cover-image class="i " src='../../resource/search.png' />
+  <!-- <cover-view class="i i-search"></cover-view> -->
+</cover-view>
+<!-- 已选 -->
+<cover-view class="pt-box">
+  <cover-view class="pt pt-select" wx:if="{{ptSelected.siteId}}"  data-item="{{ptSelected}}" bindtap="clickToList">
+    <cover-view class="i i-ptSelect"></cover-view>
+    <cover-view class="pt-lab">已选：</cover-view>
+    <cover-view class="pt-xx">
+      <cover-view class="pt-xx-tit">{{ptSelected.siteName}} </cover-view>
+      <cover-view class="pt-xx-p">{{ptSelected.mansion.mansionSite}}</cover-view>
+    </cover-view>
+  </cover-view>
+  <cover-view class="pt pt-favorite" data-item="{{ptFavorite[0]}}" bindtap="clickToList">
+    <cover-view class="i i-favorite"></cover-view>
+    <cover-view class="pt-lab">常去：</cover-view>
+    <cover-view class="pt-xx">
+      <cover-view class="pt-xx-tit">{{ptFavorite[0].siteName}} </cover-view>
+      <cover-view class="pt-xx-p">{{ptFavorite[0].mansion.mansionSite}}</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<!-- 获取用户信息授权 -->
+<cover-view class="pop pop-gaven" style="display:{{showPopGaven?'block':'none'}}">
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开启授权</button>
+</cover-view>

@@ -1,0 +1,5 @@
+<!--pages/components/topNav/topNav.wxml-->
+<div class="top-nav" style="{{'height:'+navHeight+'rpx;padding-top:'+navPadding+'rpx'}}">
+  <i-icon class="back"  type="return" size="24" color="#80848f" />
+  <span class="tit">{{title}}</span>
+</div>

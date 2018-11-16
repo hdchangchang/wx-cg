@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "top-nav": "/components/topNav/topNav",
+    "i-icon": "../../libs/iview/icon/index",
+    "i-button": "../../libs/iview/button/index"
+  }
+}

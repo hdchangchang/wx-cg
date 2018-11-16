@@ -1,0 +1,63 @@
+<!--pages/list/list.wxml-->
+<scroll-view class="">
+  <!-- 顶部导航栏 -->
+  <navigator class="topper icon icon-index" url="/pages/map/map" style="{{'height:'+navHeight+'rpx;padding-top:'+navPadding+'rpx'}}">
+    <span class="i i-location"></span>
+    <text class="txt">{{siteName}}</text>
+    <span class="i i-arrowr"></span>
+  </navigator>
+  <!-- content -->
+  <div class="banner">
+    <ul class="banner-ul">
+      <li class="banner-li">
+        <navigator class="banner-a" url="/pages/map/map">
+          <image class="banner-img" src="http://cffpic.oss-cn-beijing.aliyuncs.com/8df92/58/52d7ecf8.png"></image>
+        </navigator>
+      </li>
+    </ul>
+  </div>
+  <!-- 时间列表 -->
+  <ul class="nav">
+    <li wx:for="{{plan}}" 
+        class="{{activeIndex==index?'nav-li active':'nav-li'}}"  
+        wx:key="{{index}}" 
+        data-index="{{index}}" 
+        data-date="{{item.date}}" 
+        bindtap="clickQhTime" 
+    >
+      <h6 class="nav-day">{{today==item.date?'今天': item.week}}</h6>
+      <p class="nav-date">{{item.day}}</p>
+    </li>
+  </ul>
+  
+  <!-- 产品列表 -->
+  <div class="good-box">
+  <ul class="good-list" wx:if="{{goodsList.length>0}}">
+    <li class="good-li" wx:for="{{goodsList}}">
+      <navigator class="good-a" url="{{'/pages/detail/detail?goodsId='+item.id}}">
+        <div class="good-l">
+          <span wx:if="{{item.count==='0'}}" class="good-status">售罄</span>
+          <image class="good-img" src="{{item.goodsSmall}}" ></image>
+        </div>
+        <div class="good-r">
+          <h6 class="good-tit">{{item.goodsName}}</h6>
+          <p class="good-desc">{{item.goodsDetails || '暂无描述...'}}</p>
+          <p class="good-lab">
+            <span>{{item.sellTimeStr}}</span>
+            <span wx:for="{{item.goodsLabel}}" wx:for-item="itm" wx:if="{{itm}}">
+              {{itm}}
+            </span>
+          </p>
+          <p class="good-price">{{item.goodsMoney}}</p>
+        </div>
+      </navigator>
+      <div class="good-opera">
+        <i class="i i-cart"></i>
+        <span class="btn-buy">立即购买</span>
+      </div>
+    </li>
+  </ul>
+  <p class="nogood-desc" wx:else>备餐中...</p>
+  </div>
+</scroll-view>
+

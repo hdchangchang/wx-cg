@@ -1,0 +1,42 @@
+/* pages/detail/detail.wxss */
+.goods-pic{
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+  border-bottom: 1px solid #e1e1e1;
+}
+.goods-pic .img{
+  height: 100%;
+}
+
+.goods-detail{
+  position: relative;
+  padding: 30rpx;
+  font-size: 24rpx;
+}
+.goods-tit{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom:20rpx;
+}
+
+.goods-price{
+  margin-top:20rpx;
+}
+.goods-price .new{
+  color:red;
+  font-size: 28rpx;
+  margin-right:10rpx;
+}
+
+.goods-price .old{
+  color:#999;
+  font-size: 20rpx;
+  text-decoration: line-through;
+}
+
+.goods-num{
+  position: absolute;
+  bottom: 30rpx;
+  right:30rpx;
+}

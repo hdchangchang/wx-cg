@@ -1,0 +1,19 @@
+<!--pages/detail/detail.wxml-->
+<top-nav title="香辣牛肉"></top-nav>
+<div class="goods-pic">
+  <image class="img" src="{{goods.goods.goodsHead}}"></image>
+</div>
+<div class="goods-detail">
+  <h6 class="goods-tit">{{goods.goods.goodsName}}</h6>
+  <p class="good-lab">
+    <span>{{goods.stockName}}</span>
+    <span wx:for="{{goods.goods.goodsLabel}}">{{item}}</span>
+  </p>
+  <p class="goods-price">
+    <span class="new">{{goods.prePrice}}</span>
+    <span wx:if="{{goods.goodsMoney != goods.prePrice}}" class="old">{{goods.goodsMoney}}</span>
+  </p>
+  <p class="goods-num" wx-if="{{goods.count>0}}">
+    <i-input-number class="num" value="{{ num }}" min="0" max="{{goods.count}}" step="1" bindchange="changeNum" />
+  </p>
+</div>
